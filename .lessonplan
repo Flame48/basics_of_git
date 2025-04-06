@@ -1,0 +1,46 @@
+[
+  {
+    "explanation": "In this activity, you will learn some of the basics of git!\n\nFirst off, what is git?\nGit is a Version Control System. It keeps track of your files and stores different version of them as you work on your project.\nThis allows you to revert to previous versions, create new versions, and cooperate with others with ease.\n\nIn this activity, we will learn how to start using git with your projects to keep track of files,\nand navigate around these versions.\n\nTo start off, lets tell initialize git in this folder,\n\nUse `git init` to initialize git in this directory.\n\ngit will create the necessary resources it needs to start keeping track of files in this folder.",
+    "expected_command": "git init",
+    "hint": "Type `git init` as a command."
+  },
+  {
+    "explanation": "Great!\n\nNow that you have initialized git, lets use git to start tracking some files. We have already provided you with some files that\nwe will be using for this project. Feel free to use `ls` and `cat` to see the files and their contents.\n\nFirst, we need to tell git what all changes we want to add to this new version (currently there are no versions, so this will be our first).\n\nIf we run `git status`, git will tell us what changes it detects. As this is our first version, git sees all the contents of this folder a change that needs to be 'committed' to a version or a 'commit' as git calls them.\n\nUnderstanding `git status`:\n\nGit keeps track of the changes to a file rather than the actual file contents. So when you run git status, you will see all the changes git detects between the latest version and the actual contents of the files in your directory. These changes can be one of the following:\n- Created a New File\n- Modified a File's Contents\n- Deleted a File\n\nGit status shows the status of the current directory as seen by git, which can be quite useful to confirm what you are doing.\n\nLets understand how git keeps track of versions.\n\nImagine you are at the grocery store and need to by some groceries. The process can be broken down into 2 steps:\n1. You select the grocery items you want to buy and add them to your cart.\n2. You go to the cashier and buy the items in your cart. The cashier then hands you a receipt summarizing what you bought.\n\nVersion Control with Git is very similar. Instead of grocery items, you have 'changes'.\nThese changes can either be 'Un-tracked' (Like a grocery item on the shelf), 'Staged' (In your basket), and 'Committed' (You have purchased them).\n\nSo let's try adding some changes to our shopping cart!\n\nUse `git add A.txt` to 'stage' all the changes done to A.txt.",
+    "expected_command": "^git add A.txt$",
+    "allow_equivalents": ["^git add ./A.txt$", "^git add *$", "^git add .$"],
+    "hint": "Use `git add ./A.txt` or `git add ./A.txt`."
+  },
+  {
+    "explanation": "Now that we have successfully added our changes to the shopping cart, lets 'commit' all our changes to a new version.\nThis is similar to purchasing all our items from the grocery store.\n\nTo do so, we can run `git commit -m \"[Message]\"`, where the [Message] is going to be the name of the 'commit' or version. It's like naming your receipt on a purchase. Generally we name the commit based on what changes we made.\nFor example, If you fixed some bugs with your code, you could commit those changes and name the commit something like \"Fixed issue with ...\".\nAs this is our first commit, we could write something along the lines of \"initial commit\", or \"initial version\", or whatever you like!\n\nAlso, feel free to use `git status` to see how running `git add A.txt` affected the status!",
+    "expected_command": "^git commit -m ([\\\"'])(.+?)\\1$",
+    "hint": "Try `git commit -m \"initial commit\"`."
+  },
+  {
+    "explanation": "Congratulations! You have made your first commit in git. Let's try making another one. Lets create a new file called B.txt, and keep it empty for now.",
+    "expected_command": "^touch B.txt$",
+    "allow_equivalents": ["^touch ./B.txt$"],
+    "hint": "Use `touch B.txt` to create a file B.txt"
+  },
+  {
+    "explanation": "Now we add the changes we have made to staging. Do you remember how to do that?\n\nAs a reminder, you can use `git status` at any time.\n\nUse `!hint` if you would like a hint.",
+    "expected_command": "^git add B.txt$",
+    "allow_equivalents": ["^git add ./B.txt$", "^git add *$", "^git add .$"],
+    "hint": "Use `git add B.txt` to add changes made to B.txt. Creating a file counts as a change!"
+  },
+  {
+    "explanation": "Looks like you're getting the hang of this! Lets now commit our changes to a new version. You can use any commit message you would like.",
+    "expected_command": "^git commit -m ([\\\"'])(.+?)\\1$",
+    "hint": "Try `git commit -m \"Added B.txt\"`."
+  },
+  {
+    "explanation": "We now have two versions of this project. If we want to view our previous versions, we can run `git log` to list out previous commits.\nYou will see each commit has a string of characters before the commit name. This is the commit ID that git uses to keep track of each commit.\nIf we want to reference a commit, we use its ID, so this command is often very useful.\n\nTry running `git log` to see our two commits.",
+    "expected_command": "^git log$",
+    "hint": "Run `git log`."
+  },
+  {
+    "explanation": "You can now see the two commits and their ID's.\n\nThat's it for this demo, there's still much to learn however like how to revert to a previous version, or make new versions based on a previous version, or have teams of people work on the same project at the same time with git, and so much more! You can enter [q] now to end the activity, or you may enter some more commands like `git log`, `git status`, 'ls', 'cat', etc. to see final state.",
+    "expected_command": "^[qQ]$",
+    "hint": "Enter `q` to quit.",
+    "end": true
+  }
+]
