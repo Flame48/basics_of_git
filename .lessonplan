@@ -38,7 +38,7 @@
     "hint": "Run `git log`."
   },
   {
-    "explanation": "You can now see the two commits and their ID's.\n\nThat's it for this demo, there's still much to learn however like how to revert to a previous version, or make new versions based on a previous version, or have teams of people work on the same project at the same time with git, and so much more! You can enter [q] now to end the activity, or you may enter some more commands like `git log`, `git status`, 'ls', 'cat', etc. to see final state.",
+    "explanation": "You can now see the two commits and their ID's.\n\nThat's it for this demo, there's still much to learn however like how to revert to a previous version, or make new versions based on a previous version, or have teams of people work on the same project at the same time with git, and so much more! You can enter [q] now to end the activity, or you may continue with any more commands, if you would like to experiment :)",
     "expected_command": "^[qQ]$",
     "hint": "Enter `q` to quit.",
     "end": true
